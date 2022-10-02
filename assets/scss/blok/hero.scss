@@ -1,0 +1,37 @@
+.hero-blok {
+  background: #1a1a1a;
+  padding: rem-calc(50 0);
+  .blok {
+    &-title {
+      font-weight: 700;
+      font-size: 90px;
+      line-height: 137px;
+
+      color: #ffffff;
+    }
+  }
+  .hero {
+    &-social {
+      margin-top: rem-calc(75);
+      display: flex;
+      gap: rem-calc(24);
+      &-link {
+        a {
+          text-decoration: none;
+        }
+
+        opacity: 0.8;
+
+        transition: opacity 200ms $easeInOut;
+
+        &:hover{
+          opacity: 1;
+        }
+      }
+      &-icon{
+        height: rem-calc(24);
+        width: rem-calc(24);
+      }
+    }
+  }
+}
