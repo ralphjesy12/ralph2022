@@ -1,4 +1,4 @@
-# Ralph John Galindo 2022 Portfolio
+# Ralph John Galindo [Portfolio 2022](https://ralphjohn.netlify.app/)
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 

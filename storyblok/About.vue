@@ -5,12 +5,10 @@
                 <div class="blok-content-wrapper">
                     <div class="blok-content" v-html="renderHTML(blok.content)"></div>
                     <div class="blok-buttons">
-                        <a :href="button.link.url" v-for="(button,b) in blok.buttons" v-text="button.label"
-                            :class="[('btn-' + button.theme)]"></a>
+                        <StoryblokComponent v-for="button in blok.buttons" :key="button._uid" :blok="button" />
                     </div>
                 </div>
                 <img :src="blok.image.filename" class="blok-image">
-
             </div>
         </div>
     </div>
