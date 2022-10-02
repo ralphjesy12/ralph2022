@@ -22,10 +22,18 @@
       color: $white;
       align-items: start;
 
+      @media screen and (max-width: 991.9999px) {
+        grid-template-columns: 1fr;
+      }
+
       &-summary{
         position: sticky;
         top: rem-calc(100);
         margin-bottom: rem-calc(100);
+
+        @media screen and (max-width: 991.9999px) {
+          position: relative;
+        }
       }
 
       &-title {
