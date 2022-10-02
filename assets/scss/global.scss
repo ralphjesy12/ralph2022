@@ -5,3 +5,10 @@
 @import "layouts/header";
 @import "layouts/footer";
 @import "layouts/buttons";
+
+.container {
+  @media screen and (max-width: 991.9999px) {
+    padding-left: rem-calc(30);
+    padding-right: rem-calc(30);
+  }
+}

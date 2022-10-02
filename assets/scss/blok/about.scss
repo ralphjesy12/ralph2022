@@ -1,0 +1,55 @@
+.about-blok {
+  background: $black;
+  padding: rem-calc(75 0);
+  color: $white;
+
+  .blok {
+    &-grid {
+      display: grid;
+      grid-template-columns: 1fr rem-calc(600);
+      gap: rem-calc(120);
+
+      @media screen and (max-width: 991.9999px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &-buttons {
+      display: flex;
+      gap: rem-calc(16);
+
+      margin-top: rem-calc(60);
+    }
+
+    &-content {
+      font-weight: 400;
+      font-size: rem-calc(24);
+      line-height: rem-calc(37);
+      padding-top: rem-calc(20);
+      color: #c4c4c4;
+
+      &-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+      }
+
+      a {
+        font-weight: 700;
+        text-decoration: none;
+        color: $white;
+      }
+
+      b,
+      strong {
+        color: $white;
+      }
+    }
+
+    &-image {
+      width: 100%;
+      height: auto;
+      border-radius: rem-calc(30);
+    }
+  }
+}

@@ -4,10 +4,15 @@
   .blok {
     &-title {
       font-weight: 700;
-      font-size: 90px;
-      line-height: 137px;
+      font-size: rem-calc(90);
+      line-height: rem-calc(137);
 
       color: #ffffff;
+
+      @media screen and (max-width: 991.9999px) {
+        font-size: rem-calc(40);
+        line-height: rem-calc(72);
+      }
     }
   }
   .hero {
@@ -24,11 +29,11 @@
 
         transition: opacity 200ms $easeInOut;
 
-        &:hover{
+        &:hover {
           opacity: 1;
         }
       }
-      &-icon{
+      &-icon {
         height: rem-calc(24);
         width: rem-calc(24);
       }

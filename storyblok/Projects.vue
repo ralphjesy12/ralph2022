@@ -1,5 +1,5 @@
 <template>
-    <div v-editable="blok" class="projects-blok">
+    <div v-editable="blok" id="projects" class="projects-blok">
         <div class="container mx-auto place-items-start">
             <h1 class="blok-title" v-html="blok.title"></h1>
             <div class="blok-projects">
