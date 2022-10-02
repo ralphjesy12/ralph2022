@@ -1,0 +1,13 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  padding: rem-calc(32 0);
+  &-avatar {
+    height: rem-calc(40);
+  }
+}
+
+main{
+    padding-bottom: rem-calc(104);
+}
