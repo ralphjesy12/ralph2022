@@ -1,0 +1,73 @@
+@use "sass:math";
+
+@function strip-unit($num) {
+  @return math.div($num, ($num * 0 + 1));
+}
+
+@function rem-calc($values, $base: $rem-base) {
+  $rem-values: ();
+  $count: length($values);
+
+  @if $base == null {
+    $base: $rem-base;
+  }
+
+  @if $count == 1 {
+    @return -zf-to-rem($values, $base);
+  }
+
+  @for $i from 1 through $count {
+    $rem-values: append($rem-values, -zf-to-rem(nth($values, $i), $base));
+  }
+
+  @return $rem-values;
+}
+
+@function -zf-to-rem($value, $base: $rem-base) {
+  @if (unit($value) != "rem") {
+    $value: math.div(strip-unit($value), strip-unit($base)) * 1rem;
+  }
+  @if ($value == 0rem) {
+    $value: 0;
+  }
+  @return $value;
+}
+
+@mixin font-style($font, $line, $weight: 400, $color: $text-body, $letter: 0) {
+  font-weight: $weight;
+  font-size: rem-calc($font);
+  line-height: math.div(strip-unit($line), strip-unit($font));
+  color: $color;
+  letter-spacing: #{rem-calc(strip-unit($letter))};
+}
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+@mixin hoverStates {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root("::-webkit-input-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root(":-moz-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root("::-moz-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root(":-ms-input-placeholder") {
+    @content;
+  }
+}

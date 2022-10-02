@@ -3,11 +3,19 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "dev-ssl": "nuxt dev -o --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
     "nuxt": "3.0.0-rc.11"
+  },
+  "dependencies": {
+    "@nuxtjs/style-resources": "^1.2.1",
+    "@nuxtjs/tailwindcss": "^5.3.3",
+    "@storyblok/nuxt": "^4.4.1",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.0.2"
   }
 }

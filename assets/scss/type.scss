@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap");
+
+html,
+body {
+  font-family: "Titillium Web", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+
+  @media screen and (min-width: 992px) {
+    font-size: 9px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 10.5px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: 1400px) {
+    font-size: 13px;
+  }
+
+  @media screen and (min-width: 1600px) {
+    font-size: 13.95px;
+  }
+
+  @media screen and (min-width: 1900px) {
+    font-size: 16px;
+  }
+}
