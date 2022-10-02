@@ -1,0 +1,87 @@
+.projects-blok {
+  background: $black;
+  padding: rem-calc(75 0);
+  .blok {
+    &-title {
+      font-weight: 600;
+      font-size: rem-calc(50);
+      line-height: rem-calc(76);
+      color: $white;
+    }
+
+    &-projects {
+      margin-top: rem-calc(100);
+      gap: rem-calc(210);
+      display: grid;
+    }
+
+    &-project {
+      display: grid;
+      grid-template-columns: 1fr rem-calc(600);
+      gap: rem-calc(120);
+      color: $white;
+      align-items: start;
+
+      &-summary{
+        position: sticky;
+        top: rem-calc(100);
+        margin-bottom: rem-calc(100);
+      }
+
+      &-title {
+        font-weight: 700;
+        font-size: rem-calc(40);
+        line-height: rem-calc(61);
+        margin-bottom: rem-calc(50);
+      }
+
+      &-description {
+        font-weight: 400;
+        font-size: rem-calc(30);
+        line-height: rem-calc(46);
+        color: #c4c4c4;
+        margin-bottom: rem-calc(50);
+        b {
+          color: $white;
+        }
+      }
+
+      &-link {
+        text-decoration: none;
+        font-weight: 600;
+        font-size: rem-calc(30);
+        line-height: rem-calc(46);
+
+        opacity: 0.8;
+
+        transition: opacity 200ms $easeInOut;
+
+        @include hoverStates {
+          opacity: 1;
+        }
+      }
+
+      &-teasers {
+        display: grid;
+
+        gap: rem-calc(70);
+      }
+
+      &-teaser {
+        border-radius: rem-calc(24);
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+
+        &-link {
+          text-decoration: none;
+        }
+
+        &-image {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
