@@ -1,8 +1,8 @@
 .btn {
   &,
   &-default {
+    background: #c4c4c4;
     padding: rem-calc(12 40);
-    background: $white;
     color: $black;
     border-radius: rem-calc(35);
 
@@ -10,5 +10,11 @@
     font-size: rem-calc(24);
     line-height: rem-calc(37);
     color: #191919;
+
+    transition: background 200ms $easeInOut;
+
+    @include hoverStates {
+      background: $white;
+    }
   }
 }
