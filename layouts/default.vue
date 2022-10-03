@@ -10,12 +10,35 @@
 <script setup>
 const route = useRoute()
 
+const info = {
+    title: `Ralph John - ${route.meta.title || 'Senior Web Developer'}`,
+    description: 'An empathetic, idealistic, and forward-thinking Web Artisan based in the Philippines.',
+    image: '/ralph-social.jpg',
+    url: 'https://ralphjohn.com/'
+};
+
 useHead({
-    title: 'ralph john galindo - portfolio 2022',
+    title: info.title,
     viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
     charset: 'utf-8',
     htmlAttrs: { lang: 'en-PH' },
-    meta: [{ name: 'og:title', content: `${route.meta.title}` }],
+    meta: [
+        { name: 'title', content: info.title },
+        { name: 'description', content: info.description },
+
+        { property: "og:type", content: "website" },
+        { property: "og:url", content: info.url },
+        { property: "og:title", content: info.title },
+        { property: "og:description", content: info.description },
+        { property: "og:image", content: info.image },
+
+        { property: "twitter:card", content: "summary_large_image" },
+        { property: "twitter:url", content: info.url },
+        { property: "twitter:title", content: info.title },
+        { property: "twitter:description", content: info.description },
+        { property: "twitter:image", content: info.image }
+
+    ],
     link: [{ rel: 'apple-touch-icon', sizes: '57x57', href: '/favicon/apple-icon-57x57.png' },
     { rel: 'apple-touch-icon', sizes: '60x60', href: '/favicon/apple-icon-60x60.png' },
     { rel: 'apple-touch-icon', sizes: '72x72', href: '/favicon/apple-icon-72x72.png' },
