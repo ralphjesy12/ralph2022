@@ -13,7 +13,7 @@ const route = useRoute()
 const info = {
     title: `Ralph John - ${route.meta.title || 'Senior Web Developer'}`,
     description: 'An empathetic, idealistic, and forward-thinking Web Artisan based in the Philippines.',
-    image: '/ralph-social.jpg',
+    image: 'https://ralphjohn.com/ralph-social.jpg',
     url: 'https://ralphjohn.com/'
 };
 
