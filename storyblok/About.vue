@@ -19,8 +19,6 @@
 </style>
 
 <script setup>
-import { render } from 'vue';
-
 defineProps({ blok: Object })
 
 const renderHTML = function (blokField) {
