@@ -1,0 +1,58 @@
+.blok {
+  &-section#articles {
+    background: $black;
+    padding: rem-calc(75 0 100);
+    color: $white;
+    @media screen and (min-width: 992px) {
+      min-height: 150vh;
+    }
+  }
+
+  &-title {
+    font-weight: 600;
+    font-size: rem-calc(50);
+    line-height: rem-calc(76);
+    color: $white;
+    margin-bottom: rem-calc(50);
+  }
+
+  &-content {
+    font-weight: 400;
+    font-size: rem-calc(24);
+    line-height: rem-calc(37);
+    padding-top: rem-calc(20);
+    color: #c4c4c4;
+    margin-bottom: rem-calc(100);
+  }
+}
+
+.article {
+  &-grid {
+    display: grid;
+    gap: rem-calc(50);
+
+    @media screen and (min-width: 992px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &-image {
+    border-radius: rem-calc(8);
+    margin-bottom: rem-calc(20);
+  }
+
+  &-title {
+    font-weight: 700;
+    font-size: rem-calc(50);
+    line-height: rem-calc(76);
+    color: $white;
+    cursor: pointer;
+    margin-bottom: rem-calc(30);
+  }
+
+  &-description {
+    font-size: rem-calc(30);
+    line-height: rem-calc(46);
+    color: #C4C4C4;
+  }
+}
