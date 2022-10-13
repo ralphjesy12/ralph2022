@@ -25,6 +25,7 @@ useHead({
     meta: [
         { name: 'title', content: info.title },
         { name: 'description', content: info.description },
+        { name: 'keywords', content: 'web, portfolio, frontend, developer, jamstack, philippines' },
 
         { property: "og:type", content: "website" },
         { property: "og:url", content: info.url },
