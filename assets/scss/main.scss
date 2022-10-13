@@ -1,7 +1,7 @@
 @import "global.scss";
 
 .blok{
-    &-page{
+    &-page,&-post{
         background: $white;
         position: relative;
         z-index: 2;
