@@ -30,4 +30,10 @@ export default defineNuxtConfig({
       },
     },
   },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/', '/200.html'],
+    },
+  },
 });
