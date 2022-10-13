@@ -21,6 +21,13 @@
                 <div class="post-content" v-html="renderHTML(post.content)">
                 </div>
             </div>
+            <ClientOnly>
+                <div class="container mx-auto my-48">
+                    <div class="post-comments">
+                        <Disqus/>
+                    </div>
+                </div>
+            </ClientOnly>
         </div>
     </div>
 </template>
