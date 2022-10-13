@@ -1,7 +1,7 @@
 <template>
     <div class="post-wrapper">
         <Suspense>
-            <StoryblokComponent v-if="story" :story="story" :blok="story.content"/>
+            <StoryblokComponent v-if="story" :story="story" :blok="story.content" />
             <template #fallback>
                 Loading...
             </template>
@@ -27,8 +27,8 @@ const story = await useStoryblok('/blog/' + slug,
 const route = useRoute()
 
 const info = {
-    title: `${story.value.content.title || 'Senior Web Developer'} - Ralph John` ,
-    description: (story.value.content.description || '').substr(0,165),
+    title: `${story.value.content.title || 'Senior Web Developer'} - Ralph John`,
+    description: (story.value.content.description || '').substr(0, 165),
     image: story.value.content.image.filename,
     url: route.fullPath
 };
