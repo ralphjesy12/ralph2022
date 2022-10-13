@@ -91,6 +91,10 @@
 
     p {
       margin-bottom: rem-calc(50);
+
+      img{
+        border-radius: rem-calc(8);
+      }
     }
   }
 }
