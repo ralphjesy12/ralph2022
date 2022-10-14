@@ -12,7 +12,7 @@
                 </div>
                 <div class="post-description" v-html="post.description"></div>
                 <div class="post-image">
-                    <img :src="post.image.filename" :alt="post.title">
+                    <img :src="(post.image.filename + '/m/')" :alt="post.title">
                 </div>
             </div>
         </div>

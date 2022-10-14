@@ -8,7 +8,7 @@
                         <StoryblokComponent v-for="button in blok.buttons" :key="button._uid" :blok="button" />
                     </div>
                 </div>
-                <img :src="blok.image.filename" class="blok-image">
+                <img :src="(blok.image.filename + '/m/')" class="blok-image">
             </div>
         </div>
     </div>
