@@ -109,6 +109,19 @@
 
       img {
         border-radius: rem-calc(8);
+        margin: rem-calc(4) auto;
+      }
+
+    }
+
+    ol{
+      list-style: auto;
+      padding-left: rem-calc(32);
+      margin-bottom: rem-calc(16);
+      li{
+        p{
+          margin-bottom: 0;
+        }
       }
     }
   }
