@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   ],
   runtimeConfig: {
     public: {
-      STORY_VERSION: process.env.STORY_VERSION || "draft",
+      STORY_VERSION: process.env.NODE_ENV === 'production' ? 'published' : "draft",
     },
   },
   storyblok: {
