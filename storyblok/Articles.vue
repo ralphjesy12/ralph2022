@@ -8,7 +8,7 @@
             <div class="article-grid">
                 <article v-for="(article,a) in articles">
                     <a :href="`/${article.full_slug}`">
-                        <img class="article-image" :src="(article.content.image.filename + '/m/')">
+                        <img class="article-image" :src="(article.content.image.filename + '/m/1280x720')">
                         <h2 class="article-title" v-text="article.content.title"></h2>
                         <div class="post-meta">
                             <div class="post-tags">
