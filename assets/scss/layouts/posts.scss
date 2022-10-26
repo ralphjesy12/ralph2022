@@ -121,6 +121,10 @@
     p {
       margin-bottom: rem-calc(50);
 
+      *{
+        word-break: break-all;
+      }
+
       img {
         border-radius: rem-calc(8);
         margin: rem-calc(4) auto;
