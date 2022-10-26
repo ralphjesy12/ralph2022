@@ -7,7 +7,8 @@ export default defineNuxtConfig({
   ],
   runtimeConfig: {
     public: {
-      STORY_VERSION: process.env.NODE_ENV === 'production' ? 'published' : "draft",
+      STORY_VERSION:
+        process.env.NODE_ENV === "production" ? "published" : "draft",
     },
   },
   storyblok: {
@@ -33,7 +34,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/200.html'],
+      routes: ["/", "/200.html"],
     },
   },
 });

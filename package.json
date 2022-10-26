@@ -13,11 +13,11 @@
   },
   "dependencies": {
     "@nuxtjs/style-resources": "^1.2.1",
-    "@nuxtjs/tailwindcss": "^5.3.3",
+    "@nuxtjs/tailwindcss": "^5.3.5",
     "@storyblok/nuxt": "^4.4.1",
     "node-html-parser": "^6.1.1",
     "sass": "^1.55.0",
-    "sass-loader": "^13.0.2",
+    "sass-loader": "^13.1.0",
     "vue-disqus": "^5.1.0"
   }
 }

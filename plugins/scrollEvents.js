@@ -6,9 +6,6 @@ export default defineNuxtPlugin((nuxtApp) => {
       return savedPosition;
     }
 
-    
-      
-
     const findEl = async (hash, x = 0) => {
       return (
         document.querySelector(hash) ||
