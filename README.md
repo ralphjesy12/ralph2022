@@ -2,6 +2,8 @@
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
+[Tutorial](https://www.storyblok.com/tp/add-a-headless-CMS-to-nuxt-3-in-5-minutes)
+
 ## Setup
 
 Make sure to install the dependencies:
@@ -18,11 +20,11 @@ pnpm install --shamefully-hoist
 ```
 
 ## Development Server
-
-Start the development server on http://localhost:3000
+Setup SSL for localhost: https://www.storyblok.com/faq/setting-up-https-on-localhost-in-nuxt-3
+Start the development server on https://localhost:3000
 
 ```bash
-npm run dev
+npm run dev-ssl
 ```
 
 ## Production

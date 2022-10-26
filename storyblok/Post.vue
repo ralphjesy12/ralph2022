@@ -5,7 +5,7 @@
                 <h1 class="post-title" v-text="post.title"></h1>
                 <div class="post-meta">
                     <div class="post-tags">
-                        <a :href="tag.url" v-for="(tag,t) in tags" v-text="tag.name"></a>
+                        <a :href="tag.url" v-for="(tag, t) in tags" v-text="tag.name"></a>
                     </div>
                     &middot;
                     <time :datatime="post.date" v-text="parseDate(post.date)"></time>
@@ -24,7 +24,7 @@
             <ClientOnly>
                 <div class="container mx-auto my-48">
                     <div class="post-comments">
-                        <Disqus/>
+                        <Disqus />
                     </div>
                 </div>
             </ClientOnly>
@@ -33,6 +33,8 @@
 </template>
    
 <script setup>
+import { parse } from 'node-html-parser';
+
 const props = defineProps({ story: Object })
 
 const kebabCase = str => str
@@ -41,8 +43,30 @@ const kebabCase = str => str
     .toLowerCase()
 const post = props.story.content;
 
+const reformatRichText = function (html) {
+    const root = parse(html);
+
+    // Add ID to Headers
+    const headers = root.querySelectorAll('h1');
+
+    for (let i = 0; i < headers.length; i++) {
+        const element = headers[i];
+        element.setAttribute('id',kebabCase(element.text));
+    }
+
+    // Add Image Optimizations
+    const images = root.querySelectorAll('img');
+    for (let i = 0; i < images.length; i++) {
+        const element = images[i];
+        const src = element.getAttribute('src');
+        element.setAttribute('src',src + '/m/');
+    }
+
+    return root.toString();
+}
+
 const renderHTML = function (blokField) {
-    return renderRichText(blokField);
+    return reformatRichText(renderRichText(blokField));
 }
 
 const tags = computed(() => {
