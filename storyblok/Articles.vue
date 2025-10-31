@@ -71,6 +71,6 @@ const renderHTML = function (blokField) {
 }
 
 const limitText = function (text) {
-    return text.substr(0, 100) + '...';
+    return text.substring(0, 100) + '...';
 }
 </script>

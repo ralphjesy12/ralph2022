@@ -28,7 +28,7 @@ const route = useRoute()
 
 const info = {
     title: `${story.value.content.title || 'Senior Web Developer'} - Ralph John`,
-    description: (story.value.content.description || '').substr(0, 165),
+    description: (story.value.content.description || '').substring(0, 165),
     image: story.value.content.image.filename,
     url: route.fullPath
 };
