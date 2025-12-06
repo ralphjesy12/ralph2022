@@ -18,7 +18,7 @@
     "postprocessing": "^6.38.0",
     "sass": "^1.83.1",
     "sass-loader": "^16.0.4",
-    "three": "^0.181.2",
+    "three": "^0.180.0",
     "vue-disqus": "^5.1.0"
   }
 }

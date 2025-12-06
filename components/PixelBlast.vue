@@ -299,7 +299,6 @@ void main(){
     for (int i = 0; i < MAX_CLICKS; ++i){
       vec2 pos = uClickPos[i];
       if (pos.x < 0.0) continue;
-      float cellPixelSize = 8.0 * pixelSize;
       vec2 cuv = (((pos - uResolution * .5 - cellPixelSize * .5) / (uResolution))) * vec2(aspectRatio, 1.0);
       float t = max(uTime - uClickTimes[i], 0.0);
       float r = distance(uv, cuv);
