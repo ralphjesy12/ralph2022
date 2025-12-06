@@ -1,6 +1,8 @@
 .hero-blok {
   background: #1a1a1a;
   padding: rem-calc(50 0);
+  position: relative;
+  overflow: hidden;
   .blok {
     &-title {
       font-weight: 700;
