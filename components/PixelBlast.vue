@@ -437,7 +437,10 @@ const setup = () => {
     }
     const canvas = document.createElement('canvas');
     const gl = canvas.getContext('webgl2', { antialias: props.antialias, alpha: true });
-    if (!gl) return;
+    if (!gl) {
+      console.error('PixelBlast: WebGL2 not supported');
+      return;
+    }
     const renderer = new THREE.WebGLRenderer({
       canvas,
       context: gl as WebGL2RenderingContext,
@@ -447,6 +450,14 @@ const setup = () => {
     renderer.domElement.style.width = '100%';
     renderer.domElement.style.height = '100%';
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    
+    // Set clear alpha based on transparent prop
+    if (props.transparent) {
+      renderer.setClearAlpha(0);
+    } else {
+      renderer.setClearColor(0x000000, 1);
+    }
+    
     container.appendChild(renderer.domElement);
     const uniforms = {
       uResolution: { value: new THREE.Vector2(0, 0) },
@@ -657,6 +668,10 @@ const setup = () => {
 };
 
 onMounted(() => {
+  if (!containerRef.value) {
+    console.error('PixelBlast: Container ref not available');
+    return;
+  }
   setup();
 });
 
