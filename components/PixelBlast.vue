@@ -438,7 +438,7 @@ const setup = () => {
     const canvas = document.createElement('canvas');
     const gl = canvas.getContext('webgl2', { antialias: props.antialias, alpha: true });
     if (!gl) {
-      console.error('PixelBlast: WebGL2 not supported');
+      console.error('PixelBlast: WebGL2 not supported in this browser. Please use a modern browser with WebGL2 support.');
       return;
     }
     const renderer = new THREE.WebGLRenderer({
@@ -669,7 +669,7 @@ const setup = () => {
 
 onMounted(() => {
   if (!containerRef.value) {
-    console.error('PixelBlast: Container ref not available');
+    console.error('PixelBlast: Container ref not available. Ensure component is properly mounted in the DOM.');
     return;
   }
   setup();
