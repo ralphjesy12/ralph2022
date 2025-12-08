@@ -2,7 +2,7 @@
     <div v-editable="blok" class="hero-blok">
         <ClientOnly>
             <div style="width: 100%; height: 600px; position: absolute; top: 0; left: 0; z-index: 0;">
-                <PixelBlast
+                <LazyPixelBlast
                     variant="circle"
                     :pixel-size="6"
                     color="#A7EF9E"
@@ -37,7 +37,5 @@
 </style>
 
 <script setup>
-import PixelBlast from '~/components/PixelBlast.vue'
-
 defineProps({ blok: Object })
 </script>
